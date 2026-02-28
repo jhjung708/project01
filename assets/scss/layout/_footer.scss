@@ -1,0 +1,48 @@
+.footer {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    padding: 15rem 0;
+    
+    .footer_txt {
+        position: absolute;
+        top: 28%;
+        left: 12%;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        font-size: 2.2rem;
+        z-index: 9;
+
+        .footer_name {
+            font-size: 6rem;
+        }
+
+        .footer_desc {
+            line-height: 1.8;
+        }
+    }
+
+    .footer_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .footer_video {
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+        }
+    }
+}

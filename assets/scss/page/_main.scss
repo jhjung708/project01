@@ -1,0 +1,273 @@
+.visual {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+
+    .visual_txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        z-index: 9;
+        
+        .visual_name {
+            display: flex;
+            justify-content: center;
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            font-size: 10rem;
+
+            .visual_name_middle {
+                padding: 0 5rem;
+            }
+
+            span {
+                display: inline-block;
+                opacity: 0;
+                transform: translateY(4rem);
+            }
+        }
+
+        .visual_ment {
+            position: relative;
+            left: -1%;
+
+            span {  
+                display: inline-block;
+                opacity: 0;
+                transform: translateY(4rem);
+                font-size: 3rem;
+                letter-spacing: 1.5rem;
+            }
+        }
+    }
+
+    .visual_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #151619;
+
+        .visual_vedio {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            transform: scale(1.5);
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 15rem 10rem;
+
+    h2 {
+        padding-bottom: 2.5rem;
+        border-bottom: 1px solid #4A4D50;
+        font-size: 2rem;
+    }
+
+    .about_keyword {
+        display: flex;
+        gap: 1rem;
+        padding: 5rem 0;
+        font-size: 6rem;
+        line-height: 1.2;
+
+        .about_keyword_main,
+        .about_keyword_letter {
+            display: block;
+            opacity: 0;
+            transform: translateY(6rem);
+        }
+    }
+
+    .about_txt {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding-bottom: 10rem;
+        font-size: 2.2rem;
+        word-break: keep-all;
+        border-bottom: 1px solid #4A4D50;
+        line-height: 1.7;
+
+        .about_greeting,
+        .about_ment {
+            opacity: 0;
+        }
+
+        .about_greeting {
+            transform: translateX(4rem);
+        }
+
+        .about_ment {
+            transform: translateX(4rem);
+        }
+    }
+}
+
+.works {
+    padding: 15rem 0 0 0;
+    background-color: #000;
+
+    h2 {
+        padding-bottom: 2.5rem;
+        font-size: 2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .works_box {
+        display: flex;
+        gap: 5rem;
+        padding: 3rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+
+        .works_info {
+            flex: 1;
+            padding-top: 2rem;
+            font-size: 2.2rem;
+            word-break: keep-all;
+
+            .works_tit,
+            .works_txt {
+                opacity: 0;
+                transform: translateX(6rem);
+            }
+
+            .works_tit {
+                margin-bottom: 2rem;
+                font-size: 4rem;
+            }
+
+            .works_txt {
+                margin-bottom: 5rem;
+                line-height: 1.8;
+            }
+
+            .works_list {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 2rem 1rem; 
+
+                li {
+                    padding: 1rem 2rem;
+                    border: 1px solid #fff;
+                    border-radius: 3rem;
+                    opacity: 0;
+                    transform: translateY(4rem);
+                }
+            }
+        }
+
+        .works_frame {
+            width: 43%;
+            transform: scale(1);
+            opacity: 0.3;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;  
+            }
+        }
+    }
+}
+
+.skills {
+    padding: 7.5rem 0;
+    background-color: #000;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        height: 100svh;
+        padding-top: 8rem;
+        overflow: hidden;
+
+        h2 {
+            padding-bottom: 3.5rem;
+            font-size: 2rem;
+        }
+
+        .skills_list {
+            display: flex;
+            height: 100%;
+            padding-bottom: 10rem;
+            perspective: 50rem;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                min-width: 60rem;
+                padding: 1rem 2rem 1rem 4rem;
+                margin-right: 3rem;
+                border-left: 1px solid rgba(255,255,255,0.2);
+                word-break: keep-all;
+                opacity: 0;
+                transform: translateY(10rem) scaleY(0.8);
+                transform-origin: bottom;
+
+                .skills_number {
+                    font-size: 8rem;
+                    font-weight: 700;
+                }
+
+                .skills_tit {
+                    font-size: 4rem;
+                    font-weight: 700;
+                    line-height: 1.3;
+                }
+                
+                .skills_txt {
+                    margin-top: auto;
+                    font-size: 2.2rem;
+                    line-height: 1.8;
+                }
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 50rem; 
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
+
+.top_btn {
+    position: fixed;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(2rem);
+    z-index: 999;
+
+    a {
+        display: block;
+        padding: 0.6rem 3.5rem;
+        border: 1px solid #2ed06e;
+        border-radius: 0.6rem;
+        background-color: rgba(16, 18, 20, 0.35);
+        font-size: 1.8rem;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            background-color: #2ed06e;
+        }
+    }
+}
