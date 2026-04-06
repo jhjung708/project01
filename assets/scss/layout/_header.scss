@@ -1,10 +1,8 @@
 .header {
     position: fixed;
     width: 100%;
-    mix-blend-mode: difference;
+    //mix-blend-mode: difference;
     z-index: 999;
-
-    min-width: 120rem;
 
     .header_inner {
         display: flex;

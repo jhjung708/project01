@@ -20,6 +20,8 @@
             font-weight: 500;
             font-size: 10rem;
 
+            @include mobile { flex-direction: column; }
+
             .visual_name_middle {
                 padding: 0 5rem;
             }
@@ -73,6 +75,9 @@
     flex-direction: column;
     padding: 15rem 10rem;
 
+    @include tablets { padding: 15rem 4rem; }
+    @include mobile { padding: 15rem 2rem; }
+
     h2 {
         padding-bottom: 2.5rem;
         border-bottom: 1px solid #4A4D50;
@@ -85,6 +90,8 @@
         padding: 5rem 0;
         font-size: 6rem;
         line-height: 1.2;
+
+        @include tablets { flex-direction: column; }
 
         .about_keyword_main,
         .about_keyword_letter {
@@ -135,6 +142,8 @@
         padding: 3rem 0;
         border-bottom: 1px solid rgba(255,255,255,0.2);
 
+        @include tablets { flex-direction: column; }
+
         .works_info {
             flex: 1;
             padding-top: 2rem;
@@ -177,6 +186,8 @@
             width: 43%;
             transform: scale(1);
             opacity: 0.3;
+
+            @include tablets { width: 100%; }
 
             img {
                 width: 100%;
@@ -255,7 +266,7 @@
     left: 50%;
     transform: translateX(-50%);
     backdrop-filter: blur(2rem);
-    z-index: 999;
+    z-index: 99;
 
     a {
         display: block;

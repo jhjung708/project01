@@ -174,3 +174,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// 모바일 메뉴
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuBtn = document.querySelector(".menu_btn");
+    const mobileNav = document.querySelector(".mobile_nav");
+    const navLinks = document.querySelectorAll(".mobile_nav a");
+
+    // 햄버거 버튼
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+    });
+
+    // 메뉴 클릭 시 닫기
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            menuBtn.classList.remove("active");
+            mobileNav.classList.remove("active");
+        });
+    });
+
+});
